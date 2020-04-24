@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fitness-tracker-maor": {
+      "hosting": {
+        "fitness-tracker": [
+          "fitness-tracker-maor"
+        ]
+      }
+    }
+  }
+}

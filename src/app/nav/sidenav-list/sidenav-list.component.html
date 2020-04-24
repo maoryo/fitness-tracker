@@ -1,10 +1,18 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/login" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/login" (click)="onSidenavClose()" *ngIf="!isAuth">
     <mat-icon>face</mat-icon>
-    <span style="padding-left: 10px">My Account</span>
+    <span style="padding-left: 10px">Login</span>
   </a>
-  <a mat-list-item routerLink="/training" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/signup" (click)="onSidenavClose()" *ngIf="!isAuth">
+    <mat-icon>how_to_reg</mat-icon>
+    <span style="padding-left: 10px">Sign Up</span>
+  </a>
+  <a mat-list-item routerLink="/training" (click)="onSidenavClose()" *ngIf="isAuth">
     <mat-icon>fitness_center</mat-icon>
     <span style="padding-left: 10px">Training</span>
+  </a>
+  <a mat-list-item (click)="onLogout()" *ngIf="isAuth">
+    <mat-icon>clear</mat-icon>
+    <span style="padding-left: 10px">Logout</span>
   </a>
 </mat-nav-list>
